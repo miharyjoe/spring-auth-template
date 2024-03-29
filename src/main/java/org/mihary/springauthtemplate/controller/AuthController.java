@@ -1,6 +1,7 @@
 package org.mihary.springauthtemplate.controller;
 
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.mihary.springauthtemplate.dto.AuthenticationResponse;
@@ -18,6 +19,7 @@ import static org.springframework.http.HttpStatus.OK;
 @RestController
 @RequestMapping("/api/auth")
 @AllArgsConstructor
+@Tag(name = "Authentication")
 public class AuthController {
   private final AuthService authService;
   private final TokenService tokenService;
